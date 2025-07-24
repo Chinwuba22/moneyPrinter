@@ -43,7 +43,7 @@ export default function Home() {
   const handleMint = async () => {
     try {
       setError(null)
-      const hash  = await writeContract({
+      const {hash}  = await writeContract({
         address: TOKEN_ADDRESS,
         abi: nftGatedTokenAbi,
         functionName: 'mint',
