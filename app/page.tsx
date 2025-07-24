@@ -38,12 +38,12 @@ export default function Home() {
     query: { enabled: !!address },
   })
 
-  const { writeContract, isPending } = useWriteContract()
+  const { writeContractAsync, isPending } = useWriteContract()
 
   const handleMint = async () => {
     try {
       setError(null)
-      const hash = await writeContract({
+      const hash = await writeContractAsync({
         address: TOKEN_ADDRESS,
         abi: nftGatedTokenAbi,
         functionName: 'mint',
