@@ -1,13 +1,9 @@
-// app/config/wagmi.ts (or lib/wagmi.ts)
+// app/config/wagmi.ts
 import { getDefaultConfig } from '@rainbow-me/rainbowkit'
-import { sepolia } from 'wagmi/chains'
-import { publicProvider } from 'wagmi/providers/public'
+import { base } from 'wagmi/chains'
 
 export const config = getDefaultConfig({
-  appName: 'My dApp',
-  projectId: 'YOUR_WALLETCONNECT_PROJECT_ID', // get this from https://cloud.walletconnect.com
-  chains: [sepolia],
-  transports: {
-    [sepolia.id]: publicProvider(),
-  },
+  appName: 'My Base dApp',
+  projectId: 'YOUR_WALLETCONNECT_PROJECT_ID', // Get this from https://cloud.walletconnect.com
+  chains: [base],
 })
