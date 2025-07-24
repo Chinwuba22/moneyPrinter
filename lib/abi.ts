@@ -370,4 +370,4 @@ export const nftGatedTokenAbi =  [
                 }
             ]
         }
-    ]
+    ] as const
