@@ -26,7 +26,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body className="bg-black text-white">
-        <WagmiProvider config={config}>
+        <Wag\Provider config={config}>
           <QueryClientProvider client={queryClient}>
             <RainbowKitProvider>
               {children}

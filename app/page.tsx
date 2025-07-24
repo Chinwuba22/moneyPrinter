@@ -5,6 +5,7 @@ import { ConnectButton } from '@rainbow-me/rainbowkit'
 import { nftGatedTokenAbi } from '../lib/abi'
 import { parseUnits } from 'viem'
 import { useState } from 'react'
+import { base } from 'viem/chains'
 
 const TOKEN_ADDRESS = '0x1Bea4561783dB3BfdF2F4b771927D2733905C9e9'
 const NFT_ADDRESS = '0xa25e0af7dd580fce7121fd78e95c3f3bee258e8f'
@@ -44,11 +45,13 @@ export default function Home() {
     try {
       setError(null)
       const hash = await writeContractAsync({
-        address: TOKEN_ADDRESS,
-        abi: nftGatedTokenAbi,
-        functionName: 'mint',
-        args: [],
-})  
+    address: TOKEN_ADDRESS,
+    abi: nftGatedTokenAbi,
+    functionName: 'mint',
+    args: [],
+    chain: base,           // ✅ Set to Base Mainnet
+    account: address!,     // ✅ Must not be undefined
+}) 
       setTxHash(hash)
       await refetch()
     } catch (err: any) {
