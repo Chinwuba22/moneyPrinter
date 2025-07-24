@@ -6,7 +6,7 @@ import { nftGatedTokenAbi } from '../lib/abi'
 import { parseUnits } from 'viem'
 import { useState } from 'react'
 
-const TOKEN_ADDRESS = '0x3470d960A1B70eda5BB3D815157e767FCB31cA9C'
+const TOKEN_ADDRESS = '0x1Bea4561783dB3BfdF2F4b771927D2733905C9e9'
 const NFT_ADDRESS = '0xa25e0af7dd580fce7121fd78e95c3f3bee258e8f'
 
 export default function Home() {
@@ -80,7 +80,7 @@ export default function Home() {
                 Last Mint:{' '}
                 {lastMintTime
                   ? new Date(Number(lastMintTime) * 1000).toLocaleString()
-                  : 'Never'}
+                  : 'NO REWARDS YET'}
               </p>
             </div>
 
