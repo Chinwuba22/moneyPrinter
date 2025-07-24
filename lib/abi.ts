@@ -1,4 +1,4 @@
-export const nftGatedTokenAbi =  [
+export const nftGatedTokenAbi = [
         {
             "type": "constructor",
             "inputs": [
@@ -370,4 +370,4 @@ export const nftGatedTokenAbi =  [
                 }
             ]
         }
-    ] as const
+    ]
