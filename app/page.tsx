@@ -6,6 +6,7 @@ import { nftGatedTokenAbi } from '../lib/abi'
 import { parseUnits } from 'viem'
 import { useState } from 'react'
 import { base } from 'viem/chains'
+import '../public/boundless.png'
 
 const TOKEN_ADDRESS = '0x1Bea4561783dB3BfdF2F4b771927D2733905C9e9'
 const NFT_ADDRESS = '0xa25e0af7dd580fce7121fd78e95c3f3bee258e8f'
@@ -65,9 +66,12 @@ export default function Home() {
     (!lastMintTime || Number(lastMintTime) + 86400 < Date.now() / 1000)
 
   return (
-    <div className="min-h-screen flex flex-col justify-between items-center p-6 relative bg-gradient-to-br from-purple-700 via-indigo-800 to-indigo-900 text-white">
+    <div
+    className="min-h-screen w-full flex flex-col justify-between items-center p-6 relative text-white bg-cover bg-center bg-no-repeat bg-fixed"
+    style={{ backgroundImage: "url('/boundless.png')" }}
+  >
       {/* Wallet top-left */}
-      <div className="absolute top-4 left-4">
+      <div className="absolute top-2 left-4">
         <ConnectButton />
       </div>
 
